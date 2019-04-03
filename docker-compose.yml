@@ -3,7 +3,7 @@ services:
   Frontend:
     image: drupal
     ports:
-    - 9090:8080
+    - 9090:80
     networks:
     - mydrupal
   Backend:
