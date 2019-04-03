@@ -4,5 +4,17 @@ services:
     image: drupal
     ports:
     - 80:80
- 
- 
+    deploy:
+      replicas: 3
+    networks:
+    - jenkinet
+  Backend:
+    image: postgres
+    deploy:
+      replicas: 3
+    environment:
+    - POSTGRES_PASSWORD=123456
+    networks:
+    - jenkinet
+networks:
+  jenkinet:
