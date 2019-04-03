@@ -5,13 +5,13 @@ services:
     ports:
     - 80:80
     deploy:
-      replicas: 3
+      replicas: 6
     networks:
     - jenkinet
   Backend:
     image: postgres
     deploy:
-      replicas: 3
+      replicas: 6
     environment:
     - POSTGRES_PASSWORD=123456
     networks:
