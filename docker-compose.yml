@@ -3,16 +3,6 @@ services:
   Frontend:
     image: drupal
     ports:
-    - 9090:80
-    networks:
-    - mydrupal
-  Backend:
-    image: postgres
-    environment:
-    - POSTGRES_PASSWORD=123456
-    networks:
-    - mydrupal
-networks:
-  mydrupal:
-
+    - 80:80
+ 
  
